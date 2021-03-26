@@ -1,0 +1,8 @@
+[package]
+name = "queler"
+version = "0.1.0"
+authors = ["ogoes <otavio@ogoes.dev>"]
+edition = "2018"
+
+
+[dependencies]
