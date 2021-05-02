@@ -118,11 +118,7 @@ impl SelectBuilder {
         self.inner_join
             .iter()
             .fold("".to_string(), |acc, (table, clause)| {
-                let base = if acc.len() > 0usize {
-                    acc
-                } else {
-                    "INNER JOIN".to_string()
-                };
+                let base = format!("{} INNER JOIN", acc);
 
                 if !clause.valid {
                     format!("{} {}", base, SelectBuilder::_table(table))
